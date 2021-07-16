@@ -4,16 +4,16 @@
 
 module load gcc/8
 module load cuda/10.1
-
 module load anaconda/3/2020.02
 
 echo "Set up conda env for scanimate..."
 conda create --name scanimate python=3.6
 
+conda init
+conda activate scanimate
 
-
-virtualenv -p python3.6 ./venv/scanimate
-. ./venv/scanimate/bin/activate
+# virtualenv -p python3.6 ./venv/scanimate
+# . ./venv/scanimate/bin/activate
 
 echo "Installing torch..."
 echo "If you are using other versions (default python3.6 cuda 10.1), change the cuda version and python version in ./install.sh"
