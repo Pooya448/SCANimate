@@ -27,7 +27,7 @@ def render_single_image(result_mesh_file, output_image_file, vis, yprs, raw_colo
     vis.add_geometry(mesh)
     ctr = vis.get_view_control()
     ctr.convert_from_pinhole_camera_parameters(cam_params)
-    
+
     for ypr in yprs:
         ctr.rotate(0, RENDER_RESOLUTION/180*ypr[1])
         ctr.rotate(RENDER_RESOLUTION/180*ypr[0], 0)
@@ -61,7 +61,7 @@ args = parser.parse_args()
 
 input_dirs = [args.input_dir]
 
-vis = o3d.visualization.Visualizer()
+vis = o3d.visualization.Visualizer(visible = False)
 RENDER_RESOLUTION = 512
 FOCAL_LENGTH = 1.5
 vis.create_window(width=RENDER_RESOLUTION, height=RENDER_RESOLUTION)
@@ -139,5 +139,3 @@ for dir_index in tqdm(range(len(input_dirs))):
 
     command = 'rm -rf ' + tmp_dir
     subprocess.run(command, shell=True, stdout=subprocess.DEVNULL)
-
-
