@@ -8,6 +8,7 @@ pip install pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/whee
 
 echo "Installing other dependencies..."
 pip install -r requirements.txt --user
+pip install open3d==0.12.0
 
 echo "Installing customized smpl code"
 cd smpl

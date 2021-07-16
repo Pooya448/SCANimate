@@ -13,8 +13,13 @@ cd ../../smpl/models/smpl
 rsync -r ../../../temps/smpl/ .
 
 unzip "*.zip"
-mv smpl/* .
+mv smpl/models/* .
 rm -rf smpl
+
+mv basicModel_f_lbs_10_207_0_v1.0.0.pkl SMPL_FEMALE.pkl
+mv basicmodel_m_lbs_10_207_0_v1.0.0.pkl SMPL_MALE.pkl
+
+rm -rf *.zip
 cd ../../..
 
 # Data Files
