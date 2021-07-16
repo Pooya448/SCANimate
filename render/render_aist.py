@@ -61,7 +61,7 @@ args = parser.parse_args()
 
 input_dirs = [args.input_dir]
 
-vis = o3d.visualization.Visualizer(visible = False)
+vis = o3d.visualization.Visualizer()
 RENDER_RESOLUTION = 512
 FOCAL_LENGTH = 1.5
 vis.create_window(width=RENDER_RESOLUTION, height=RENDER_RESOLUTION)
