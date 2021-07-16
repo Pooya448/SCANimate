@@ -1,25 +1,25 @@
 #!/bin/bash -l
-
+#
 ## This is your working directory
 #SBATCH -D /u/gtiwari/SCANimate/
-
+#
 # Job Name Shown in the Queue (squeue)
 #SBATCH -J SCANimate Test
-
+#
 # We are interested in nodes with GPUs, i.e., GPU Queue (Partition):
 #SBATCH --partition=gpu
-
+#
 # Node feature:
 #SBATCH --constraint="gpu"
 #SBATCH --gres=gpu:rtx5000:2       # If using only 1 GPU of a shared node
 #SBATCH --mem=92500
-
+#
 # Number of nodes and MPI tasks per node:
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1     # This stays 1 for 2 GPU training too, in most cases
 #SBATCH --cpus-per-task=16      # Number of processes ?? (Each GPU has 16 workers ??)
-
-
+# 
+#
 # wall clock limit:
 #SBATCH --time=1:00:00         #Specify a smaller duration if your script takes less time
 
