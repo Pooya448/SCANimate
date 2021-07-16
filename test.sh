@@ -15,7 +15,7 @@
 #
 # Node feature:
 #SBATCH --constraint="gpu"
-#SBATCH --gres=gpu:rtx5000:2       # If using only 1 GPU of a shared node
+#SBATCH --gres=gpu:v100:1       # If using only 1 GPU of a shared node
 #SBATCH --mem=92500
 #
 # Number of nodes and MPI tasks per node:
