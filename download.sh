@@ -29,3 +29,5 @@ rsync -r ../temps/data/ .
 unzip "*.zip"
 
 cd ../
+
+rm -rf temps/
