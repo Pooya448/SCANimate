@@ -11,7 +11,7 @@ pip install -r requirements.txt --user
 
 echo "Installing customized smpl code"
 cd smpl
-python3 setup.py install
+sudo python3 setup.py install
 cd ../
 
 echo "Done!"
