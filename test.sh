@@ -21,7 +21,7 @@
 #
 #
 # wall clock limit:
-#SBATCH --time=1:00:00         #Specify a smaller duration if your script takes less time
+#SBATCH --time=00:10:00         #Specify a smaller duration if your script takes less time
 
 module load gcc/8
 module load cuda/10.1
