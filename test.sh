@@ -6,6 +6,10 @@
 # Job Name Shown in the Queue (squeue)
 #SBATCH -J SCANimate
 #
+## Standard ouput and error from your program. These are relative to the working directory
+#SBATCH -o ./testing/render.out.%j
+#SBATCH -e ./testing/render.err.%j
+#
 # We are interested in nodes with GPUs, i.e., GPU Queue (Partition):
 #SBATCH --partition=gpu
 #
