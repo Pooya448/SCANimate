@@ -34,5 +34,4 @@ module load anaconda/3/2020.02
 source /mpcdf/soft/SLE_12/packages/x86_64/anaconda/3/2020.02/etc/profile.d/conda.sh
 conda activate scanimate
 
-python -m ./apps.test_scanimate -c ./data/pretrained_configs/release_03223_shortlong.yaml -t ./data/test/gLO_sBM_cAll_d14_mLO1_ch05
-python ./render/render_aist.py -i demo_result/results_test/release_03223_shortlong_test_gLO_sBM_cAll_d14_mLO1_ch05/ -o demo_result
+python -m apps.test_scanimate -c ./data/pretrained_configs/release_03223_shortlong.yaml -t ./data/test/gLO_sBM_cAll_d14_mLO1_ch05
